@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/img"
+
+    >
+
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="150dp"
+        android:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rawTicTacToe"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/btn1"
+            android:onClick="check" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="check" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:onClick="check" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:onClick="check" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="check" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="wrap_content"
+            android:onClick="check" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:onClick="check" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="check" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:onClick="check" />
+
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:text="TIC TAC TOE GAME"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/rawTicTacToe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/rawTicTacToe"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/tictactoe" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
